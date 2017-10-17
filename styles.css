@@ -84,7 +84,7 @@ section article ul {
   border-radius: 30px;
 }
 
-section article div ul li a[href^="http"] {
+section article ul li a[href^="http"] {
   color: teal;
 }
 
