@@ -1,14 +1,5 @@
 @charset "UTF-8";
 
-@font-face {
-  font-family: argel;
-  src: Billy Argel Font___.ttf;
-}
-
-body {
-  font-family: argel !important;
-}
-
 header {
   background: linear-gradient(to bottom, rgba(5,5,5,0.6), rgba(9,9,9,0.1));
   padding: 5px;
@@ -126,7 +117,7 @@ section article ul li a[href^="http"] {
 }
 
 section article ul li a[href^="http"]:hover {
-  color: goldenrod;
+  color: rgb(175,50,0);
   text-shadow: 3px 3px 4px white;
 }
 
