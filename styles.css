@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: argel;
+  src: Billy Argel Font___.ttf;
+}
+
+body {
+  font-family: argel !important;
+}
+
 header {
   background: linear-gradient(to bottom, rgba(5,5,5,0.6), rgba(9,9,9,0.1));
   padding: 5px;
@@ -51,35 +60,59 @@ nav {
   color: goldenrod;
 }
 
-.main {
+.main, .main p {
   background-color: black;
   margin: 0px !important;
+  font-weight: bold;
+  text-shadow: 2px 2px 3px gray;
+  font-size: 1.35em;
+  color: cadetblue;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
-.resources, .main {
+.resources {
   font-weight: bold;
-  margin: 10px;
+  margin: 0px;
   padding: 15px 10px 10px 10px;
-  text-shadow: 2px 3px 2px gray;
+  text-shadow: 2px 2px 3px gray;
   font-size: 1.5em;
   color: cadetblue;
 }
 
 .resources h2 {
   text-decoration: underline;
+  padding-top: 10px;
   font-weight: inherit;
   text-shadow: inherit;
 }
 
 .resource-container {
   background-color: black;
-  min-height: 100vh;
   display: flex;
+  min-height: 100vh;
+}
+
+.resource-container .resources ul li img {
+  height: 25px; 
+  width: 30px; 
+  border-radius: 45%;
 }
 
 section article ul {
-  box-shadow: 6px 6px 6px teal;
+  box-shadow: 8px 8px 8px teal;
   border-radius: 30px;
+  border-top: 1px solid rgba(00,80,80,0.7);
+  border-left: 1px solid rgba(00,80,80,0.7);
+}
+
+section article ul li {
+  list-style-type: circle;
+  color: rgba(00,80,80,0.7);
+}
+
+section article ul:last-child {
+  padding-bottom: 15px  
 }
 
 section article dd {
@@ -88,16 +121,17 @@ section article dd {
   padding-left: 25px;
 }
 
-section article ul li {
-  list-style-type: circle;
-}
-
 section article ul li a[href^="http"] {
   color: teal;
 }
 
 section article ul li a[href^="http"]:hover {
   color: goldenrod;
+  text-shadow: 3px 3px 4px white;
+}
+
+section article ul li a::after {
+  content: '\21DD'
 }
 
 footer {
