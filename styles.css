@@ -65,10 +65,6 @@ nav {
   color: cadetblue;
 }
 
-.resources:nth-of-type(1) {
-  margin-left: 25px;  
-}
-
 .resources h2 {
   text-decoration: underline;
   font-weight: inherit;
@@ -78,6 +74,7 @@ nav {
 .resource-container {
   background-color: black;
   min-height: 100vh;
+  display: flex;
 }
 
 section article ul {
@@ -99,10 +96,6 @@ section article ul li a[href^="http"] {
   color: teal;
 }
 
-section article div ul li a[href^="http"]::after {
-  background-image: 
-}
-
 section article ul li a[href^="http"]:hover {
   color: goldenrod;
 }
@@ -110,12 +103,7 @@ section article ul li a[href^="http"]:hover {
 footer {
   background: linear-gradient(to top, rgba(5,5,5,0.6), rgba(9,9,9,0.1));
   color: black;
-  /*background-color: black;*/
   text-align:center;
   margin-top: 0px;
   padding-bottom: 5px;
-}
-
-p {
-  
 }
