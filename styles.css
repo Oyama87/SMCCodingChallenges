@@ -1,14 +1,5 @@
 @charset "UTF-8";
 
-@font-face {
-  font-family: argel;
-  src: Billy Argel Font___.ttf;
-}
-
-body {
-  font-family: argel !important;
-}
-
 header {
   background: linear-gradient(to bottom, rgba(5,5,5,0.6), rgba(9,9,9,0.1));
   padding: 5px;
@@ -68,7 +59,12 @@ nav {
   font-size: 1.35em;
   color: cadetblue;
   padding-top: 5px;
-  padding-bottom: 5px;
+}
+
+.resource-container {
+  background-color: black;
+  display: flex;
+  min-height: 100vh;
 }
 
 .resources {
@@ -81,22 +77,9 @@ nav {
 }
 
 .resources h2 {
-  text-decoration: underline;
   padding-top: 10px;
   font-weight: inherit;
   text-shadow: inherit;
-}
-
-.resource-container {
-  background-color: black;
-  display: flex;
-  min-height: 100vh;
-}
-
-.resource-container .resources ul li img {
-  height: 25px; 
-  width: 30px; 
-  border-radius: 45%;
 }
 
 section article ul {
@@ -111,16 +94,6 @@ section article ul li {
   color: rgba(00,80,80,0.7);
 }
 
-section article ul:last-child {
-  padding-bottom: 15px  
-}
-
-section article dd {
-  font-size: 0.6em;
-  text-shadow: 1px 2px 1px #505050;
-  padding-left: 25px;
-}
-
 section article ul li a[href^="http"] {
   color: teal;
 }
@@ -133,6 +106,22 @@ section article ul li a[href^="http"]:hover {
 
 section article ul li a::after {
   content: '\21DD'
+}
+
+.resource-container .resources ul li img {
+  height: 25px; 
+  width: 30px; 
+  border-radius: 45%;
+}
+
+section article dd {
+  font-size: 0.6em;
+  text-shadow: 1px 2px 1px #505050;
+  padding-left: 25px;
+}
+
+section article ul:last-child {
+  padding-bottom: 15px  
 }
 
 footer {
