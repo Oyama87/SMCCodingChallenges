@@ -36,6 +36,12 @@ nav {
   background: linear-gradient(to top, rgba(5,5,5,0.6), rgba(9,9,9,0.1));
 }
 
+.menu-icon {
+  height: 30px; 
+  width:30px;
+  opacity: 0.4;
+}
+
 .challenges li .buttons [href]::after {
   content: '\21B4'
 }
