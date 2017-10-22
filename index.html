@@ -10,190 +10,221 @@
   </head>
 
   <body>
-    <header>
-      <h1><i>SMC Programming Club Coding Challenges</i></h1>
-    </header>
-    <nav>
-      <ul class="challenges">
-        <li>
-          <span class="buttons">
-            <a href="categories/FrontEnd.html">
+    <div class="fixed-header">
+      <header>
+        <h1><i>SMC Programming Club Coding Challenges</i></h1>
+      </header>
+      
+      <nav class="challenge-nav">
+        <div class="challenge-list">
+          <button class="button">
+            <a href="#">
               <img 
                 src="icons/if_menu-alt_134216.png"
                 class="menu-icon">
                 Front End Web Development
             </a>
-          </span>
-        </li>         
-        <li>
-          <span class="buttons">
+          </button>         
+          <div class="drop-content">
+            <div class="secondary-drop">
+              <a>Subcategory 1</a>
+              <div class="secondary-content">
+                  <a class="final">The first challenge</a>
+                  <a class="final">The second challenge</a>
+                  <a class="final">The third challenge</a>
+                  <a class="final">The fourth challenge</a>
+              </div>
+            </div>
+            <div class="secondary-drop">
+              <a>Subcategory 2</a>
+            </div>
+          </div>
+        </div>
+          
+        <div class="challenge-list">
+          <button class="button">
             <a href="#">
               <img 
                 src="icons/if_menu-alt_134216.png"
                 class="menu-icon">
                 Programming Logic
             </a>
-          </span>
-        </li>
-        <li>
-          <span class="buttons">
+          </button>
+        </div>
+          
+        <div class="challenge-list">
+          <p class="button">
             <a href="#">
               <img 
                 src="icons/if_menu-alt_134216.png"
                 class="menu-icon">
                 Phone Apps (iOS and Android)
             </a>
-          </span>
-        </li>
-      </ul>
-  </nav>
+          </p>
+        </div>
+    </nav>
+  </div>
   
   <section class="main">
-    <p style="padding-left: 20px; text-align: center">
-      &#8609; &#8609 Reference Material &#8609 &#8609;
-    </p>
-  </section>
-  
-  <section class="resource-container" style="display: flex !important;">
-    <article style="flex: 1" class="resources" id="front-end-rs">
-        <ul>
-          <h2>Front End Resources</h2>
-          <li>
-            <a 
-              href=
-              "https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
-              target="_blank">
-              MDN: Getting started with HTML
-            </a>
-            <img src="icons/1968.jpg">
-          </li>
-          <dd>
-            Entry point for the Mozilla Developer Network HTML tutorials.<br>  
-            Start here if you have no experience with web development.<br>
-          </dd>
-          <li>
-            <a 
-              href=
-              "https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works"
-              target="_blank">
-              MDN: How CSS Works.
-            </a>
-            <img src="icons/1968.jpg">
-          </li>
-          <dd>
-            Introduction to how CSS is applied to HTML elements. A little<br> 
-            heavy on theory, but highly recommended to start here after you<br> 
-            have gotten a little bit of experience with HTML.
-          </dd>
-          <li>
-            <a 
-              href=
-              "https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Syntax"
-              target="_blank">
-              MDN: CSS Syntax.
-            </a>
-            <img src="icons/1968.jpg">
-          </li>
-          <dd>
-            Beginning tutorial for writing your own CSS rules.
-          </dd>    
-          <li>
-            <a 
-              href=
-              "https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
-              target="_blank">
-              Complete Guide To FlexBox 
-            </a>
-            <img src="icons/1968.jpg">
-          </li>
-          <dd>
-            Simple but thorough guide to using FlexBox<br>
-            properties and values.
-          </dd>
-          <li><a 
-                href="https://flexboxfroggy.com/"
+    <section class="ref-header">
+      <p style="padding-left: 20px; text-align: center">
+        &#8609; &#8609 Reference Material &#8609 &#8609;
+      </p>
+    </section>
+    
+    <section class="resource-container" style="display: flex !important;">
+      <article style="flex: 1" class="resources" id="front-end-rs">
+          <ul>
+            <h2>Front End Resources</h2>
+            <li>
+              <a 
+                href=
+                "https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
                 target="_blank">
-                Flexbox Froggy 
+                MDN: Getting started with HTML
               </a>
               <img src="icons/1968.jpg">
-          </li>
-          <dd>
-            A fun game that teaches you to<br> 
-            use Flexbox to position elements.
-          </dd>
-          <li><a 
-                href="http://www.react.express/"
+            </li>
+            <dd>
+              Entry point for the Mozilla Developer Network HTML tutorials.<br>  
+              Start here if you have no experience with web development.<br>
+            </dd>
+            <li>
+              <a 
+                href=
+                "https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works"
                 target="_blank">
-                React Express 
+                MDN: How CSS Works.
               </a>
               <img src="icons/1968.jpg">
-          </li>
-          <dd>
-            A guide to getting started with React.<br> 
-            Prior experience with HTML, CSS, and<br>
-            JavaScript highly recommended.
-          </dd>
-        </ul>
-    </article>
-    
-    <article class="resources" style="flex: 1" id="logic-rs" >
-      <ul>
-        <h2>Logic Resources</h2>
-        <li>
-          <a 
-            href="https://github.com/getify/You-Dont-Know-JS" target="_blank">
-            You Don't Know JavaScript 
-          </a>
-          <img src="icons/1968.jpg">
-        </li>
-        <dd> 
-          GitHub Repository containing a book on advanced JavaScript<br>
-          programming concepts and techniques.
-        </dd>
-        <li>
-          <a 
-            href="http://www.cplusplus.com/reference/iolibrary/">
-            C/C++ I/O Libraries 
-          </a>
-          <img src="icons/1968.jpg">
-        </li>
-        <dd>
-          Quick Reference for C/C++ Input/Output stream member<br> 
-          values and functions.
-        </dd>
-      </ul>
-    </article>
-    
-    <article style="flex: 1" class="resources" id="mobile-rs">
+            </li>
+            <dd>
+              Introduction to how CSS is applied to HTML elements. A little<br> 
+              heavy on theory, but highly recommended to start here after you<br> 
+              have gotten a little bit of experience with HTML.
+            </dd>
+            <li>
+              <a 
+                href=
+                "https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Syntax"
+                target="_blank">
+                MDN: CSS Syntax.
+              </a>
+              <img src="icons/1968.jpg">
+            </li>
+            <dd>
+              Beginning tutorial for writing your own CSS rules.
+            </dd>    
+            <li>
+              <a 
+                href=
+                "https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+                target="_blank">
+                Complete Guide To FlexBox 
+              </a>
+              <img src="icons/1968.jpg">
+            </li>
+            <dd>
+              Simple but thorough guide to using FlexBox<br>
+              properties and values.
+            </dd>
+            <li><a 
+                  href="https://flexboxfroggy.com/"
+                  target="_blank">
+                  Flexbox Froggy 
+                </a>
+                <img src="icons/1968.jpg">
+            </li>
+            <dd>
+              A fun game that teaches you to<br> 
+              use Flexbox to position elements.
+            </dd>
+            <li><a 
+                  href="https://www.w3schools.com/howto/default.asp"
+                  target="_blank">
+                  W3Schools: How-To Guides
+                </a>
+                <img src="icons/1968.jpg">
+            </li>
+            <dd>
+              Large collection of guides on modern front<br> 
+              end web techniques such as drop-down menus,<br>
+              navigation bars, parallax scrolling, and more.
+            </dd>               
+            <li><a 
+                  href="http://www.react.express/"
+                  target="_blank">
+                  React Express 
+                </a>
+                <img src="icons/1968.jpg">
+            </li>
+            <dd>
+              A guide to getting started with React.<br> 
+              Prior experience with HTML, CSS, and<br>
+              JavaScript highly recommended.
+            </dd>
+          </ul>
+      </article>
+      
+      <article class="resources" style="flex: 1" id="logic-rs" >
         <ul>
-          <h2>Mobile Resources</h2>
+          <h2>Logic Resources</h2>
           <li>
             <a 
-              href="https://facebook.github.io/react-native/">
-              React-Native Documentation 
+              href="https://github.com/getify/You-Dont-Know-JS" target="_blank">
+              You Don't Know JavaScript 
             </a>
             <img src="icons/1968.jpg">
           </li>
-          <dd>
-            React-Native is a technology invented by Facebook<br>
-            that allows developers to write native mobile apps<br>
-            for iOS and Android using only JavaScript and JSX.
+          <dd> 
+            GitHub Repository containing a book on advanced JavaScript<br>
+            programming concepts and techniques.
           </dd>
           <li>
             <a 
-              href="https://expo.io/">
-              Expo 
+              href="http://www.cplusplus.com/reference/iolibrary/">
+              C/C++ I/O Libraries 
             </a>
             <img src="icons/1968.jpg">
           </li>
           <dd>
-            Expo is an Integrated Development Environment<br>
-            specifically designed for mobile app development<br>
-            using React-Native.
+            Quick Reference for C/C++ Input/Output stream member<br> 
+            values and functions.
           </dd>
         </ul>
-    </article>
-    
+      </article>
+      
+      <article style="flex: 1" class="resources" id="mobile-rs">
+          <ul>
+            <h2>Mobile Resources</h2>
+            <li>
+              <a 
+                href="https://facebook.github.io/react-native/">
+                Official React-Native Documentation 
+              </a>
+              <img src="icons/1968.jpg">
+            </li>
+            <dd>
+              React-Native is a technology invented by Facebook<br>
+              that allows developers to write native mobile apps<br>
+              for iOS and Android using only JavaScript and JSX.
+            </dd>
+            <li>
+              <a 
+                href="https://expo.io/">
+                Expo 
+              </a>
+              <img src="icons/1968.jpg">
+            </li>
+            <dd>
+              Expo is an Integrated Development Environment<br>
+              specifically designed for mobile app development<br>
+              using React-Native.
+            </dd>
+          </ul>
+      </article>
+      
+    </section>
   </section>
   
   <footer>
