@@ -62,13 +62,13 @@ h1 {
   font-weight: bold;
   text-align: center;
   box-sizing: border-box;
-  background: linear-gradient(to bottom, rgb(15,15,15), rgb(100,100,100));
+  /*background: linear-gradient(to bottom, rgb(0,0,0), rgb(100,100,100));*/
 }
 
 .challenge-list .drop-content .secondary-drop {
   display: none;
   /*background-color: inherit;*/
-  /*background: linear-gradient(to bottom, rgb(25,25,25), rgb(100,100,100));*/
+  background: linear-gradient(to bottom, rgb(0,0,0), rgb(50,50,50));
   border: 3px solid black;
   color: inherit;
   text-align: center;
@@ -87,7 +87,7 @@ h1 {
   left: 100%;
   top: 0;
   color: inherit;
-  background: linear-gradient(to bottom, rgb(15,15,15), rgb(100,100,100));
+  /*background: linear-gradient(to bottom, rgb(0,0,0), rgb(100,100,100));*/
   text-align: center;
 }
 
@@ -95,17 +95,20 @@ h1 {
   border-top: 3px solid black;
   border-left: 3px solid black;
   border-right: 3px solid black;
-  padding-left: 5px;
+  /*padding-left: 5px;
   padding-right: 5px;
   padding-bottom: 3px;
-  /*background: linear-gradient(to bottom, rgb(25,25,25), rgb(100,100,100));*/
+  */
+  min-width: 200%;
+  background: linear-gradient(to bottom, rgb(0,0,0), rgb(50,50,50));
+  text-shadow: 3px 3px 3px black;
   cursor: pointer;
 }
 
 .challenge-list .drop-content .secondary-drop .secondary-content .final:last-child {
-  border-bottom: 2px solid black;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
+  border-bottom: 3px solid black;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
 }
 
 .challenge-list:hover .drop-content {
@@ -132,6 +135,7 @@ h1 {
 }
 .drop-content .secondary-drop .secondary-content .final:hover {
   background: linear-gradient(to bottom, teal, black);
+  text-shadow: 2px 2px 2px rgb(100,100,100);
 }
 /*.challenges {
   display: flex;
@@ -181,9 +185,9 @@ h1 {
 }
 
 .challenge-list:hover .button {
-  border-top: 2px solid teal;
-  border-left: 2px solid teal;
-  border-right: 2px solid teal;
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
   background: linear-gradient(to bottom, teal, black);
   cursor: pointer;
 }
