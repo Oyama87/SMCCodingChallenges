@@ -33,7 +33,7 @@ h1 {
   flex-direction: row;
   justify-content: space-around;
   min-width: 100%;
-  padding-bottom: 15px;
+  padding-bottom: 0px;
 }
 
 .challenge-list {
@@ -58,22 +58,23 @@ h1 {
   position: absolute;
   min-width: 100%;
   z-index: 1;
-  color: teal;
-  background-color: black;
+  color: cadetblue;
   font-weight: bold;
   text-align: center;
   box-sizing: border-box;
+  background: linear-gradient(to bottom, rgb(15,15,15), rgb(100,100,100));
 }
 
 .challenge-list .drop-content .secondary-drop {
   display: none;
   /*background-color: inherit;*/
-  background: linear-gradient(to bottom, rgb(25,25,25), rgb(200,200,200));
-  border: 2px solid teal;
+  /*background: linear-gradient(to bottom, rgb(25,25,25), rgb(100,100,100));*/
+  border: 3px solid black;
   color: inherit;
   text-align: center;
   box-sizing: border-box;
   cursor: pointer;
+  padding-bottom: 3px;
 }
 
 .challenge-list .drop-content .secondary-drop:last-child {
@@ -86,24 +87,25 @@ h1 {
   left: 100%;
   top: 0;
   color: inherit;
-  background: linear-gradient(to bottom, rgb(25,25,25), rgb(200,200,200));
+  background: linear-gradient(to bottom, rgb(15,15,15), rgb(100,100,100));
   text-align: center;
 }
 
 .challenge-list .drop-content .secondary-drop .secondary-content .final {
-  border-top: 2px solid teal;
-  border-left: 2px solid teal;
-  border-right: 2px solid teal;
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
   padding-left: 5px;
   padding-right: 5px;
-  background: linear-gradient(to bottom, rgb(25,25,25), rgb(200,200,200));
+  padding-bottom: 3px;
+  /*background: linear-gradient(to bottom, rgb(25,25,25), rgb(100,100,100));*/
   cursor: pointer;
 }
 
 .challenge-list .drop-content .secondary-drop .secondary-content .final:last-child {
-  border-bottom: 2px solid teal;
-  border-left: 2px solid teal;
-  border-right: 2px solid teal;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
 }
 
 .challenge-list:hover .drop-content {
@@ -114,16 +116,19 @@ h1 {
 .challenge-list .drop-content .secondary-drop {
   display: flex;
   flex-direction: column;
+  text-shadow: 2px 2px 2px black;
 }
 
 .challenge-list .drop-content .secondary-drop:hover {
   background: linear-gradient(to bottom, teal, black);
+  text-shadow: 2px 2px 2px rgb(100,100,100);
 }
 
 .drop-content .secondary-drop:hover .secondary-content {
   display: flex;
   flex-direction: column;
   min-width: 50%;
+  box-shadow: 5px 3px 5px black;
 }
 .drop-content .secondary-drop .secondary-content .final:hover {
   background: linear-gradient(to bottom, teal, black);
@@ -156,10 +161,12 @@ h1 {
 
 .button {
   margin: 0 !important;
-  padding:0 !important;
+  padding: 0;
+  padding-bottom: 15px !important;
   border: none;
   background: none;
   min-width: 100%;
+  min-height: 100%;
 }
 
 .button a {
@@ -188,9 +195,8 @@ h1 {
 }*/
 
 .main {
-  position: absolute;
   min-width: 100%;
-  top: 135px;
+  margin-top: 142px;
 }
 
 .ref-header, .ref-header p {
