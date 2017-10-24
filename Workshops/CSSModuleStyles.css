@@ -1,0 +1,221 @@
+h1 {
+  text-align: center;
+}
+
+/*
+  The root-container holds the 4 child containers with the bars.  
+*/
+.root-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* 
+  The 4 children containers that hold the bars for each type of CSS styling
+  category.  Since they are all pretty much copies of one another in terms 
+  of layout, we give them all the class 'column' in our html and set their 
+  flex-direction to 'column' here, so that the bars contained inside are stacked 
+  on top of one another.
+*/
+.root-container .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  min-width: 20%; /*prevents bars from shrinking due to smaller <p> content.*/
+}
+
+.root-container .column h2 {
+  margin-bottom: 0px;
+}
+
+/* 
+  Applies styling to every bar anywhere within the root container,
+  regardless of which column container they are in. Mostly for layout
+  purposes.
+*/
+.root-container .column .bar {
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: teal;
+  min-width: 100%;
+}
+
+/*
+  Styling for the gradient bars.
+*/
+.column .gradient-solid {
+  background-color: #008080;
+} 
+
+.column .gradient-to-bottom {
+  background: linear-gradient(to bottom, rgb(235,235,235), rgb(00,80,80));
+}
+
+.column .gradient-to-top {
+  background: linear-gradient(to top, rgb(235,235,235), rgb(00,80,80));
+}
+
+.column .gradient-to-right {
+  background: linear-gradient(to right, rgb(235,235,235), rgb(00,80,80));
+}
+
+.column .gradient-to-left {
+  background: linear-gradient(to left, rgb(235,235,235), rgb(00,80,80));
+}
+
+.column .gradient-circle {
+  background: radial-gradient(circle, rgb(235,235,235), rgb(00,80,80));
+}
+
+.column .gradient-ellipse {
+  background: radial-gradient(rgb(235,235,235), rgb(00,80,80));
+}
+
+.column .gradient-triple {
+  background: linear-gradient(rgb(0,80,80), rgb(235,235,235), rgb(0,80,80));
+}
+
+/*
+  Styling for the border bars.
+*/
+.column .border-solid-black {
+  border: 3px solid black;
+}
+
+.column .border-dashed-black {
+  border: 3px dashed black;
+}
+
+.column .border-dotted-black {
+  border: 3px dotted black;
+}
+
+.column .border-radius-black {
+  border: 3px solid black;
+  border-radius: 25px;
+}
+
+.column .border-radius {
+  border-radius: 25px;
+}
+
+/*
+  Styling for the shadow bars.
+*/
+.column .shadow-solid {
+  box-shadow: 5px 5px black;
+}
+
+.column .shadow-blur {
+  box-shadow: 5px 5px 10px black;
+}
+
+.column .shadow-radius {
+  box-shadow: 5px 5px 10px 3px black;
+}
+
+.column .shadow-full {
+  box-shadow: 0px 0px 12px 3px black;
+}
+
+.column .shadow-inset {
+  box-shadow: inset 0 0 15px 2px black;
+}
+
+.column .shadow-text {
+  text-shadow: 2px 2px 2px red;
+}
+
+/*
+  Applies styling to every bar in the hover column (except the last
+  since it doesn't have the .hover class attribute). cursor: pointer ; 
+  changes the mouse pointer to the hand icon when hovered over.
+*/
+                                            
+.column .hover {                            /**/
+  border-radius: 18px;                      /**/
+}
+
+.column .hover:hover {                      /**/
+  cursor:pointer;                           /**/
+}
+
+/**********************************************/
+
+/* 
+  Styles for the individual hoverable bars.
+*/
+.column .hover-gradient:hover {
+  background: linear-gradient(rgb(35,35,35), teal, rgb(35,35,35));
+}
+
+.column .hover-shadow:hover {
+  box-shadow: 0 0 10px 2px black;
+  border: 2px solid black;
+}
+
+.column .hover-reverse:hover {
+  color: teal;
+  background-color: black;
+}
+
+.column .hover-highlight {
+  background: linear-gradient(to bottom, rgb(35,35,35), teal, rgb(35,35,35));
+}
+
+.column .hover-highlight:hover {
+  background: linear-gradient(to bottom, black, gold, black);
+}
+
+/*
+  Entry point for the drop-down menu
+*/
+.column .hover-drop {
+  position: relative;
+  border: 3px solid black;
+  display: block;
+  cursor: pointer;
+}
+
+/*
+  Hidden portion of the drop-down menu.
+*/
+.column .hover-drop .drop-menu {
+  display: none; /* This line hides the component.*/
+  border: 3px solid black;
+  position: absolute; /* This line keeps the component positioned according to its parent element.*/
+  min-width: 50%;
+  margin-left: -3px; /* Compensating for parent border.*/
+  z-index: 1;
+}
+
+.column .hover-drop:hover {
+  color: teal;
+  background-color: black;
+}
+
+/*
+  This line causes the hidden portion of the drop-down menu to be revealed.
+*/
+.column .hover-drop:hover .drop-menu {
+  display: block;
+}
+.column .hover-drop:hover .drop-menu a {
+  display: block; /* Converting <a> to block level element.*/
+  border-bottom: 3px solid black;
+  color: black;
+}
+
+.column .hover-drop:hover .drop-menu a:last-child {
+  display: block;
+  border-bottom: 0; 
+}
+
+.column .hover-drop:hover .drop-menu a:hover {
+  color: teal;
+  background-color: black;
+}
+
+

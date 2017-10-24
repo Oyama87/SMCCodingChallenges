@@ -1,0 +1,42 @@
+h1 {
+  text-align: center;
+}
+
+.root-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.root-container .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  min-width: 20%;
+}
+
+.root-container .column h2 {
+  margin-bottom: 0px;
+}
+
+.root-container .column .bar {
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: teal;
+  min-width: 100%;
+}
+
+.column .hover-drop {
+  display: block;
+  position: relative;
+  border: 3px solid black;
+}
+
+.column .hover-drop .drop-menu {
+  display: none;
+  position: absolute;
+  border: 3px solid black;
+  min-width: 50%;
+  margin-left: -3px;
+}
