@@ -4,56 +4,43 @@
   position: fixed;
   top: 0;
   min-width: 100%;
-  z-index: 1;
+  background: linear-gradient(rgb(25,25,25), rgb(255,255,255), rgb(25,25,25));
+  display: flex;
+  flex-direction: column;
+  height: 12vh;
+  margin: 0;
 }
 
-header {
-  background: linear-gradient(to bottom, rgb(25,25,25), rgb(255,255,255));
-  padding: 5px; 
+.fixed-header h1 {
+  height: 6vh; 
   text-align: center;
   color: cadetblue;
-}
-
-h1 {
-  padding: 10px;
+  display: block;
   text-shadow: 2px 2px 2px black;
   text-decoration: underline;
   font-weight: bold !important;
-}
-
-.resources-container .resources h2 {
-  padding-left: 15px;
-  margin-bottom: 0px;
-  z-index: 0;
+  min-width: 100%;
+  font-size: 4vh;
+  margin: 0;
 }
 
 .challenge-nav {
-  background: linear-gradient(to top, rgb(25,25,25), rgba(255,255,255));
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   min-width: 100%;
-  padding-bottom: 0px;
+  height: 6vh;
 }
 
+/*--- First drop menu ---*/
 .challenge-list {
   position: relative;
-  display: inline-block;
-  box-sizing: border-box;
+  display: block;
   flex: 1;
   text-align: center;
 }
 
-/*.challenges:first-of-type {
-  padding-left: 25px;
-}
-
-.challenges:last-of-type {
-  padding-right: 25px;
-}
-*/
-
-.drop-content {
+.challenge-list .drop-content {
   display: none;
   position: absolute;
   min-width: 100%;
@@ -62,12 +49,11 @@ h1 {
   font-weight: bold;
   text-align: center;
   box-sizing: border-box;
-  /*background: linear-gradient(to bottom, rgb(0,0,0), rgb(100,100,100));*/
+  box-shadow: 0 0 2em 0.5em;
+  margin: 0 !important;
 }
 
 .challenge-list .drop-content .secondary-drop {
-  display: none;
-  /*background-color: inherit;*/
   background: linear-gradient(to bottom, rgb(0,0,0), rgb(50,50,50));
   border: 3px solid black;
   color: inherit;
@@ -75,9 +61,13 @@ h1 {
   box-sizing: border-box;
   cursor: pointer;
   padding-bottom: 3px;
+  text-shadow: 2px 2px 2px black;
+  font-size: 2vh;
+  margin: 0 !important;
 }
+/*-----------------------*/
 
-.challenge-list .drop-content .secondary-drop:last-child {
+.challenge-list .drop-content .secondary-drop:last-child {/* Removes top border from bottom menu item.*/
   border-top: 0;
 }
 
@@ -97,9 +87,9 @@ h1 {
   border-right: 3px solid black;
   /*padding-left: 5px;
   padding-right: 5px;
-  padding-bottom: 3px;
   */
-  min-width: 200%;
+  padding-bottom: 3px;
+  /*min-width: 200%;*/
   background: linear-gradient(to bottom, rgb(0,0,0), rgb(50,50,50));
   text-shadow: 3px 3px 3px black;
   cursor: pointer;
@@ -116,91 +106,79 @@ h1 {
   flex-direction: column;
 }
 
-.challenge-list .drop-content .secondary-drop {
-  display: flex;
-  flex-direction: column;
-  text-shadow: 2px 2px 2px black;
-}
-
 .challenge-list .drop-content .secondary-drop:hover {
-  background: linear-gradient(to bottom, teal, black);
+  background: linear-gradient(to bottom, teal, black, teal);
   text-shadow: 2px 2px 2px rgb(100,100,100);
 }
 
 .drop-content .secondary-drop:hover .secondary-content {
   display: flex;
   flex-direction: column;
-  min-width: 50%;
-  box-shadow: 5px 3px 5px black;
+  min-width: 100%;
+  box-shadow: 0 0 2em 0.2em gold;
 }
-.drop-content .secondary-drop .secondary-content .final:hover {
-  background: linear-gradient(to bottom, teal, black);
+
+.drop-content .secondary-drop .secondary-content .beginner .material-icons {
+  color: green;
+}
+
+.drop-content .secondary-drop .secondary-content .beginner:hover {
+  background: linear-gradient(to bottom, green, black, green);
   text-shadow: 2px 2px 2px rgb(100,100,100);
-}
-/*.challenges {
-  display: flex;
-  margin-top: 0px;
-  padding-bottom: 10px;
-  margin-bottom: 0px;
-  list-style-type: none;
-  justify-content: space-around;
-  padding-left: 0px;
-  }
-*/
-
-/*.drop-content a:hover .secondary-content {
-  display: block;
-}*/
-
-.menu-icon {
-  height: 25px; 
-  width: 25px;
-  opacity: 0.4;
+  color: cadetblue;
 }
 
-/*.challenges .button a[href]::after {
-  content: '\21B4'
+.drop-content .secondary-drop .secondary-content .intermediate .material-icons {
+  color: yellow;
 }
-*/
 
-.button {
+.drop-content .secondary-drop .secondary-content .intermediate:hover {
+  background: linear-gradient(to bottom, yellow, black, yellow);
+  text-shadow: 2px 2px 2px rgb(100,100,100);
+  color: cadetblue;
+}
+
+.drop-content .secondary-drop .secondary-content .advanced .material-icons {
+  color: red;
+}
+
+.drop-content .secondary-drop .secondary-content .advanced:hover {
+  background: linear-gradient(to bottom, red, black, red);
+  text-shadow: 2px 2px 2px rgb(100,100,100);
+  color: cadetblue;
+}
+
+.challenge-list .button {
   margin: 0 !important;
-  padding: 0;
-  padding-bottom: 15px !important;
   border: none;
   background: none;
   min-width: 100%;
-  min-height: 100%;
-}
-
-.button a {
-  font-size: 30px;
+  height: 6vh;
+  overflow: auto;
+  font-size: 3vh;
   color: cadetblue;
   font-weight: bold;
-  text-shadow: 2px 2px 2px black; 
+  text-shadow: 2px 2px 2px black;  
 }
 
-.challenge-list:hover {
-  background: linear-gradient(to bottom, rgb(25,25,25), rgb(200,200,200));
-}
+.challenge-list .button::after {
+  content: '\2b9b'
+} 
 
-.challenge-list:hover .button {
-  border-top: 3px solid black;
-  border-left: 3px solid black;
-  border-right: 3px solid black;
+.challenge-list:hover .button  {
   background: linear-gradient(to bottom, teal, black);
   cursor: pointer;
+  color: black;
 }
 
-/*.button a:hover {
-  background-color: goldenrod;
-  color: black;
-  text-shadow: 2px 2px 2px white;
-}*/
+.resources-container .resources h2 {
+  padding-left: 15px;
+  margin-bottom: 0px;
+}
 
 .main {
+  margin-top: 12vh;
   min-width: 100%;
-  margin-top: 142px;
 }
 
 .ref-header, .ref-header p {
@@ -225,8 +203,7 @@ h1 {
   padding: 15px 10px 10px 10px;
   text-shadow: 2px 2px 3px gray;
   font-size: 1.5em;
-  color: cadetblue;
-  overflow: 
+  color: cadetblue; 
 }
 
 .resources h2 {
@@ -259,12 +236,6 @@ section article ul li a[href^="http"]:hover {
 
 section article ul li a::after {
   content: '\21DD'
-}
-
-.resource-container .resources ul li img {
-  height: 25px; 
-  width: 30px; 
-  border-radius: 45%;
 }
 
 section article dd {
