@@ -114,6 +114,23 @@
   background: linear-gradient(to bottom, rgb(0,0,0), rgb(50,50,50));
   text-shadow: 3px 3px 3px black;
   cursor: pointer;
+  font-size: 2vh;
+  color: cadetblue;
+}
+
+.challenge-list .drop-content .secondary-drop .secondary-content .beginner:hover {
+  color: green;
+  text-decoration: none;
+}
+
+.challenge-list .drop-content .secondary-drop .secondary-content .intermediate:hover {
+  color: yellow;
+  text-decoration: none;
+}
+
+.challenge-list .drop-content .secondary-drop .secondary-content .advanced:hover {
+  color: red;
+  text-decoration: none;
 }
 
 .challenge-list .drop-content .secondary-drop .secondary-content .final:nth-of-type(1) {
@@ -257,39 +274,39 @@
   font-size: 4vh;
 }
 
-section article ul {
+.resources ul {
   box-shadow: 8px 8px 8px teal;
   border-radius: 30px;
   border-top: 1px solid rgba(00,80,80,0.7);
   border-left: 1px solid rgba(00,80,80,0.7);
 }
 
-section article ul li {
+.resources ul li {
   list-style-type: circle;
   color: rgba(00,80,80,0.7);
 }
 
-section article ul li a[href^="http"] {
+.resources ul li a[href^="http"] {
   color: teal;
 }
 
-section article ul li a[href^="http"]:hover {
+.resources ul li a[href^="http"]:hover {
   color: rgb(175,50,0);
   text-shadow: 3px 3px 4px white;
   text-decoration: none;
 }
 
-section article ul li a::after {
+.resources ul li a::after {
   content: '\21DD'
 }
 
-section article dd {
+.resources dd {
   font-size: 0.6em;
   text-shadow: 1px 2px 1px #505050;
   padding-left: 25px;
 }
 
-section article ul:last-child {
+.resources ul:last-child {
   padding-bottom: 15px  
 }
 
