@@ -55,20 +55,31 @@
 
 .challenge-list .drop-content .secondary-drop {
   background: linear-gradient(to bottom, rgb(0,0,0), rgb(50,50,50));
-  border: 3px solid black;
   color: inherit;
   text-align: center;
   box-sizing: border-box;
   cursor: pointer;
-  padding-bottom: 3px;
+  /*padding-bottom: 0.3vh;*/
   text-shadow: 2px 2px 2px black;
   font-size: 2vh;
   margin: 0 !important;
+  height: 3.5vh;
 }
+
+.challenge-list .drop-content .secondary-drop::after {
+  content: '\279c';
+  position: absolute;
+  right: 1vw;
+}
+
 /*-----------------------*/
 
+.challenge-list .drop-content .secondary-drop:first-child {/* Removes top border from bottom menu item.*/
+  border-top: 0.3vh solid black;
+}
+
 .challenge-list .drop-content .secondary-drop:last-child {/* Removes top border from bottom menu item.*/
-  border-top: 0;
+  border-bottom: 0.3vh solid black;
 }
 
 .challenge-list .drop-content .secondary-drop .secondary-content {
@@ -81,25 +92,47 @@
   text-align: center;
 }
 
+.challenge-list .drop-content .secondary-drop:nth-of-type(2) .secondary-content {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 03.5vh;
+  color: inherit;
+  /*background: linear-gradient(to bottom, rgb(0,0,0), rgb(100,100,100));*/
+  text-align: center;
+}
+
 .challenge-list .drop-content .secondary-drop .secondary-content .final {
-  border-top: 3px solid black;
-  border-left: 3px solid black;
-  border-right: 3px solid black;
+  border-left: 0.3vh solid black;
+  border-right: 0.3vh solid black;
+  height: 3.5vh;
   /*padding-left: 5px;
   padding-right: 5px;
   */
-  padding-bottom: 3px;
+  /*padding-bottom: 0.3vh;*/
   /*min-width: 200%;*/
   background: linear-gradient(to bottom, rgb(0,0,0), rgb(50,50,50));
   text-shadow: 3px 3px 3px black;
   cursor: pointer;
 }
 
-.challenge-list .drop-content .secondary-drop .secondary-content .final:last-child {
-  border-bottom: 3px solid black;
-  border-left: 3px solid black;
-  border-right: 3px solid black;
+.challenge-list .drop-content .secondary-drop .secondary-content .final:nth-of-type(1) {
+  border-top: 0.3vh solid black;
+  border-left: 0.3vh solid black;
+  border-right: 0.3vh solid black;
 }
+
+.challenge-list .drop-content .secondary-drop .secondary-content .final:last-child {
+  border-bottom: 0.3vh solid black;
+  border-left: 0.3vh solid black;
+  border-right: 0.3vh solid black;
+}
+
+.challenge-list .drop-content .secondary-drop .secondary-content .final .material-icons {
+  font-size: inherit;
+}
+
+
 
 .challenge-list:hover .drop-content {
   display: flex;
@@ -111,7 +144,16 @@
   text-shadow: 2px 2px 2px rgb(100,100,100);
 }
 
+
+
 .drop-content .secondary-drop:hover .secondary-content {
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  box-shadow: 0 0 2em 0.2em gold;
+}
+
+.challenge-list .drop-content .secondary-drop:nth-of-type(2):hover .secondary-content {
   display: flex;
   flex-direction: column;
   min-width: 100%;
@@ -184,9 +226,10 @@
 .ref-header, .ref-header p {
   background-color: black;
   margin: 0px !important;
+  text-align: center;
   font-weight: bold;
   text-shadow: 2px 2px 3px gray;
-  font-size: 1.35em;
+  font-size: 4vh;
   color: cadetblue;
   padding-top: 5px;
 }
@@ -195,6 +238,7 @@
   background-color: black;
   display: flex;
   min-height: 100vh;
+  
 }
 
 .resources {
@@ -202,7 +246,7 @@
   margin: 0px;
   padding: 15px 10px 10px 10px;
   text-shadow: 2px 2px 3px gray;
-  font-size: 1.5em;
+  font-size: 2.5vh;
   color: cadetblue; 
 }
 
@@ -210,6 +254,7 @@
   padding-top: 10px;
   font-weight: inherit;
   text-shadow: inherit;
+  font-size: 4vh;
 }
 
 section article ul {
